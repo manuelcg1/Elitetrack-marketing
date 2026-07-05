@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import legacy styles to help migration if needed */
+@layer components {
+  /* You can gradually port styles from assets/styles.css here */
+}
+
+/* Integración automática: importar estilos legacy para que formen parte del build */
+@import "../assets/styles.css";
