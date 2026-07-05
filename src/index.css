@@ -2,10 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import legacy styles to help migration if needed */
-@layer components {
-  /* You can gradually port styles from assets/styles.css here */
+/* Base layer: aplicar background, texto y tipografía globales usando Tailwind tokens */
+@layer base {
+  body {
+    @apply bg-n text-w font-sans leading-7;
+  }
+  a {
+    @apply no-underline text-inherit;
+  }
 }
 
-/* Integración automática: importar estilos legacy para que formen parte del build */
-@import "../assets/styles.css";
+/* Componentes pequeños para reemplazar estilos legacy que usamos aún */
+@layer components {
+  .btn-ghost {
+    @apply rounded-full px-4 py-2 border border-slate-600;
+  }
+  .btn-primary {
+    @apply rounded-full px-6 py-3 bg-g text-black font-semibold;
+  }
+  /* Alias para clases legacy encontradas en assets/styles.css */
+  .hero {
+    @apply min-h-screen bg-n2 bg-center bg-cover;
+  }
+  .hero-grid {
+    @apply max-w-[1180px] mx-auto p-8 md:py-32 grid md:grid-cols-2 gap-12 items-center;
+  }
+  .nav {
+    @apply p-6 flex items-center justify-between gap-4;
+  }
+  .brand {
+    @apply flex items-center gap-3 font-extrabold tracking-tight;
+  }
+  .mark {
+    @apply grid place-items-center w-11 h-11 border-2 border-g rounded-lg;
+    background: rgba(34, 242, 45, 0.12);
+  }
+  .links {
+    @apply flex items-center gap-6 font-semibold;
+  }
+  .menu {
+    @apply hidden md:block bg-[rgba(255,255,255,0.06)] rounded-lg w-11 h-11;
+  }
+  .tag {
+    @apply text-g uppercase tracking-widest font-extrabold text-xs;
+  }
+  .lead {
+    @apply text-lg text-slate-300 max-w-2xl;
+  }
+  .actions {
+    @apply flex flex-wrap gap-3 mt-6;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center min-h-[48px] px-5 rounded-full;
+  }
+}
