@@ -1,26 +1,23 @@
-import React from 'react'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import Services from './components/Services'
-import Benefits from './components/Benefits'
-import Process from './components/Process'
-import CTA from './components/CTA'
-import Footer from './components/Footer'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import ServicesPage from './pages/ServicesPage';
+import ContactPage from './pages/ContactPage';
 
 export default function App() {
   return (
-    <div className="bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800 text-white min-h-screen">
+    <div className="min-h-screen bg-n text-white">
       <Header />
-      <main className="space-y-16">
-        <Hero />
-        <About />
-        <Services />
-        <Benefits />
-        <Process />
-        <CTA />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/servicios" element={<ServicesPage />} />
+          <Route path="/contacto" element={<ContactPage />} />
+        </Routes>
       </main>
       <Footer />
     </div>
-  )
+  );
 }

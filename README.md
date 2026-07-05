@@ -20,13 +20,13 @@ npm start
 Archivos relevantes
 
 - `index.html` — entrada principal.
-- `assets/app.js` — JavaScript del sitio.
-- `assets/styles.css` — estilos.
 - `package.json` — scripts y dependencias de desarrollo.
+- El código fuente de la aplicación está en la carpeta `src/` (React + TypeScript + Tailwind).
 
 Notas
 
 - Este es un sitio estático; no hay paso de compilación por defecto.
+- Este es un sitio migrado a React + Vite + TypeScript + Tailwind; el código fuente está en `src/`.
 - Para producción puede servirse desde cualquier host estático o CDN.# EliteTrack Web Corporativa
 
 Sitio estático independiente para publicar en `/var/www/elitetrack-web`.
