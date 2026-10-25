@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from '../../assets/elitetrack-logo.png';
 
 const links = [
   ['Soluciones', '#servicios'],
@@ -15,9 +16,13 @@ const Header: React.FC = () => {
     <header className="sticky top-0 z-40 border-b border-white/10 bg-n/90 backdrop-blur">
       <nav className="container flex min-h-[84px] items-center justify-between gap-4">
         <a className="flex items-center gap-3 font-extrabold text-xl" href="#inicio">
-          <span className="grid h-11 w-11 place-items-center rounded-lg border-2 border-g text-g">
-            ET
-          </span>
+          <img
+            src={logo}
+            alt=""
+            width={44}
+            height={44}
+            className="h-11 w-11 shrink-0 rounded-lg object-contain"
+          />
           <span>
             ELITE<span className="text-g">TRACK</span>
           </span>

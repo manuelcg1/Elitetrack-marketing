@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import platformPreview from '../../assets/plataforma.jpg';
 
 const industries = [
   ['Transporte de carga', 'Control de rutas, tiempos y seguridad en cada viaje.'],
@@ -343,27 +344,42 @@ const Home: React.FC = () => {
             Explorar la plataforma
           </a>
         </div>
-        <div className="rounded-lg border border-white/10 bg-[#09283f] p-5">
-          <div className="aspect-[4/3] rounded-lg bg-[linear-gradient(135deg,rgba(34,242,45,0.18),transparent_35%),linear-gradient(45deg,#061827,#0d354d)] p-5">
-            <div className="grid h-full grid-rows-[auto_1fr_auto] rounded-lg border border-white/10 bg-n/80 p-4">
-              <div className="flex justify-between text-sm text-m">
-                <span>Dashboard ejecutivo</span>
-                <span>Actualizado ahora</span>
+        <figure className="min-w-0 rounded-2xl border border-white/10 bg-gradient-to-br from-g/10 via-[#09283f] to-n p-2 shadow-[0_24px_70px_rgba(0,0,0,0.35)] sm:p-3">
+          <div className="overflow-hidden rounded-xl border border-white/10 bg-[#111e30]">
+            <div className="flex items-center gap-3 border-b border-white/10 px-3 py-3 sm:px-4">
+              <div aria-hidden="true" className="flex shrink-0 gap-1.5">
+                <span className="h-2 w-2 rounded-full bg-white/30" />
+                <span className="h-2 w-2 rounded-full bg-white/30" />
+                <span className="h-2 w-2 rounded-full bg-g/80" />
               </div>
-              <div className="my-6 grid place-items-center rounded-lg border border-dashed border-g/30 text-center">
-                <div>
-                  <strong className="block text-5xl text-g">24/7</strong>
-                  <span className="text-m">monitoreo activo</span>
-                </div>
-              </div>
-              <div className="grid grid-cols-3 gap-3 text-center text-xs text-m">
-                <span>Rutas</span>
-                <span>Eventos</span>
-                <span>Alertas</span>
-              </div>
+              <span className="min-w-0 flex-1 truncate text-center text-xs font-medium text-slate-300">
+                Plataforma ELITETRACK
+              </span>
+              <span className="h-2 w-2 shrink-0 rounded-full bg-g" aria-hidden="true" />
             </div>
+            <a
+              href={platformPreview}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ampliar captura de la plataforma ELITETRACK (abre en otra pestaña)"
+              className="block cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-g"
+            >
+              <img
+                src={platformPreview}
+                alt="Interfaz de ELITETRACK con menú de gestión de flota y mapa de seguimiento GPS en La Libertad."
+                width={1363}
+                height={598}
+                loading="lazy"
+                decoding="async"
+                className="block h-auto w-full"
+              />
+            </a>
+            <figcaption className="flex flex-wrap items-center justify-between gap-2 border-t border-white/10 px-4 py-3 text-xs text-slate-300">
+              <span>Tu flota, conectada en un solo lugar</span>
+              <span className="font-semibold text-g">Clic para ampliar ↗</span>
+            </figcaption>
           </div>
-        </div>
+        </figure>
       </section>
 
       <section id="beneficios" className="border-y border-white/10 bg-white/[0.03] py-20">
@@ -529,7 +545,7 @@ const Home: React.FC = () => {
             <a className="btn bg-g text-n font-extrabold" href="mailto:hola@elitetrack.pe">
               Solicitar evaluación
             </a>
-            <a className="btn border border-white/15 bg-white/5" href="https://wa.me/51999123456">
+            <a className="btn border border-white/15 bg-white/5" href="https://wa.me/51957262087">
               Hablar por WhatsApp
             </a>
           </div>
