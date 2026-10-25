@@ -65,8 +65,8 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-extrabold">Contacto</h4>
             <ul className="mt-4 space-y-2 text-sm text-m">
-              <li>+51 999 123 456</li>
-              <li>hola@elitetrack.pe</li>
+              <li>+51 957 262 087</li>
+              <li>contacto@elitetrack.site</li>
               <li>Chao, La Libertad - Perú</li>
               <li>Lun a Sáb: 8:00 am - 6:00 pm</li>
             </ul>
